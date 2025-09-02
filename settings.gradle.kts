@@ -11,6 +11,9 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -21,4 +24,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Messenger"
 include(":app")
- 
+include(":templates:android-library")
+include(":templates:feature:domain")
+include(":templates:feature:presentation")
+include(":templates:script")

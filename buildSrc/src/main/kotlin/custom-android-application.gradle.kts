@@ -8,8 +8,8 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        minSdk = 24
-        targetSdk = 36
+        minSdk = Const.MinSdk
+        targetSdk = Const.TargetSdk
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -33,4 +33,8 @@ android {
     buildFeatures {
         compose = true
     }
+}
+
+dependencies {
+    implementation(library("androidx-material3"))
 }

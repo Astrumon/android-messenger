@@ -1,2 +1,4 @@
-class Const {
+object Const {
+    const val MinSdk = 24
+    const val TargetSdk = 36
 }
