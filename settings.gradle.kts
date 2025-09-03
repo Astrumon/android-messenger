@@ -28,3 +28,5 @@ include(":templates:android-library")
 include(":templates:feature:domain")
 include(":templates:feature:presentation")
 include(":templates:script")
+
+include(":core:essentials")

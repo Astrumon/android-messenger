@@ -6,6 +6,18 @@ data class InputArgs(
     val outputModulePackage: String
 )
 
+/**
+ * Before running the script, make sure to build it and create a fat jar.
+ * To build fat jar, run bundleScript task:
+ *   ./gradlew :templates:script:bundleScript
+ * The fat jar will be created in the root directory of the project as create.jar
+ *
+ * You can run the script in two ways:
+ * 1. Command line:
+ *    .\create.cmd kotlin-library :core:my-library com.example.mylib
+ * 2. From configured IDE run configuration:
+ *    Program arguments: kotlin-library :core:my-library com.example.mylib
+ */
 fun main(args: Array<String>) {
     val inputArgs = parseArgs(args)
     val generator = TemplateGeneratorImpl()
@@ -18,6 +30,7 @@ fun main(args: Array<String>) {
  *  java -jar create.jar <template_name> <module_name> <package>
  *  For example:
  *  java -jar create.jar kotlin-library :my-library com.example.mylib
+ *  Don't forget to check settings.gradle.kts file for the correct include module name prefix and prevent duplicate
  */
 private fun parseArgs(args: Array<String>): InputArgs {
     if (args.size != 3) {
@@ -53,8 +66,4 @@ private fun parseArgs(args: Array<String>): InputArgs {
         outputModuleName = outputModuleName,
         outputModulePackage = outputModulePackage
     )
-}
-
-interface TemplateGenerator {
-    fun generate(inputArgs: InputArgs)
 }

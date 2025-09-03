@@ -12,17 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.ua.astrumon.messenger.ui.theme.MessengerTheme
-import com.ua.astrumon.templates.android_library.TestAndroidLib
-import com.ua.astrumon.templates.feature.domain.FeatureDomainLib
-import com.ua.astrumon.templates.feature.presentation.FeaturePresentationLib
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        TestAndroidLib()
-        FeatureDomainLib()
-        FeaturePresentationLib()
         setContent {
             MessengerTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->

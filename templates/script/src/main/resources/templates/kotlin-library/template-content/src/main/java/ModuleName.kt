@@ -1,4 +1,5 @@
 package %PACKAGE%
 
 class %NAME% {
+
 }
