@@ -1,5 +1,9 @@
 package %PACKAGE%
 
-class %NAME% {
-
+class %MODULE_NAME% {
+    
+    fun hello() {
+        println("Hello from %MODULE_NAME%!")
+    }
+    
 }

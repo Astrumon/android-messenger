@@ -24,12 +24,9 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/common-android" />
             <option value="$PROJECT_DIR$/core/essentials" />
             <option value="$PROJECT_DIR$/templates" />
-            <option value="$PROJECT_DIR$/templates/android-library" />
-            <option value="$PROJECT_DIR$/templates/feature" />
-            <option value="$PROJECT_DIR$/templates/feature/domain" />
-            <option value="$PROJECT_DIR$/templates/feature/presentation" />
             <option value="$PROJECT_DIR$/templates/script" />
           </set>
         </option>

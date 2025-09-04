@@ -24,9 +24,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Messenger"
 include(":app")
-include(":templates:android-library")
-include(":templates:feature:domain")
-include(":templates:feature:presentation")
 include(":templates:script")
 
 include(":core:essentials")
+include(":core:common-android")
