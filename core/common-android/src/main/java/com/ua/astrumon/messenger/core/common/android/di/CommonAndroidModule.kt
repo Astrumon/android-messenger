@@ -1,7 +1,9 @@
 package com.ua.astrumon.messenger.core.common.android.di
 
 import com.ua.astrumon.messenger.core.common.android.AndroidLogger
+import com.ua.astrumon.messenger.core.common.android.AndroidStringProvider
 import com.ua.astrumon.messenger.core.essentials.logger.Logger
+import com.ua.astrumon.messenger.core.essentials.resources.StringProvider
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -13,4 +15,8 @@ interface CommonAndroidModule {
 
     @Binds
     fun bindLogger(logger: AndroidLogger): Logger
+
+
+    @Binds
+    fun bindAndroidStringProvider(androidStringProvider: AndroidStringProvider): StringProvider
 }
