@@ -28,3 +28,5 @@ include(":templates:script")
 
 include(":core:essentials")
 include(":core:common-android")
+include(":features:init:presentation")
+include(":features:init:domain")

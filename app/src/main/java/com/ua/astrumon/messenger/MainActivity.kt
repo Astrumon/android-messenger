@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.ua.astrumon.messenger.core.essentials.exceptions.ConnectionException
+import com.ua.astrumon.messenger.core.essentials.exceptions.mapper.ExceptionToMessageMapper
 import com.ua.astrumon.messenger.core.essentials.logger.Logger
 import com.ua.astrumon.messenger.ui.theme.MessengerTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,14 +21,20 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+
     @Inject
-    lateinit var logger: Logger
+    lateinit var exceptionToMessageMapper: ExceptionToMessageMapper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Logger.d("Hello FROM MainActivity")
-        logger.d("Hello from injected logger")
+
+        val message1 = exceptionToMessageMapper.getLocalizedMessage(ConnectionException())
+        val message2 = ExceptionToMessageMapper.getLocalizedMessage(ConnectionException())
+
+        Logger.d(message1)
+        Logger.d(message2)
+
         enableEdgeToEdge()
         setContent {
             MessengerTheme {
