@@ -1,4 +1,4 @@
-package com.ua.astrumon.messenger.core.essentials.exceptions
+package com.ua.astrumon.messenger.core.essentials.exceptions.base
 
 import com.ua.astrumon.messenger.core.essentials.resources.StringProviderStore
 

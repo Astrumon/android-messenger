@@ -3,5 +3,6 @@ plugins {
 }
 
 dependencies {
+    implementation(projects.core.essentials)
     testImplementation(libs.junit)
 }

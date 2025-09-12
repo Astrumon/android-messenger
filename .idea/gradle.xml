@@ -30,6 +30,9 @@
             <option value="$PROJECT_DIR$/features/init" />
             <option value="$PROJECT_DIR$/features/init/domain" />
             <option value="$PROJECT_DIR$/features/init/presentation" />
+            <option value="$PROJECT_DIR$/features/test" />
+            <option value="$PROJECT_DIR$/features/test/domain" />
+            <option value="$PROJECT_DIR$/features/test/presentation" />
             <option value="$PROJECT_DIR$/templates" />
             <option value="$PROJECT_DIR$/templates/script" />
           </set>

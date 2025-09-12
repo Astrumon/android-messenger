@@ -1,14 +1,14 @@
 package com.ua.astrumon.messenger.feature.init.domain
 
-import com.ua.astrumon.messenger.core.essentials.exceptions.AppException
-import com.ua.astrumon.messenger.core.essentials.exceptions.WithLocalizedMessage
+import com.ua.astrumon.messenger.core.essentials.exceptions.base.AbstractAppException
+import com.ua.astrumon.messenger.core.essentials.exceptions.base.WithLocalizedMessage
 import com.ua.astrumon.messenger.core.essentials.resources.StringProviderStore
 
 
 
-abstract class InitAppException(
+abstract class InitAbstractAppException(
     message: String, cause: Throwable? = null
-) : AppException(message, cause), WithLocalizedMessage {
+) : AbstractAppException(message, cause), WithLocalizedMessage {
     override fun getLocalizedErrorMessage(stringProviderStore: StringProviderStore): String {
         return getLocalizedErrorMessage(stringProviderStore<InitStringProvider>())
     }
@@ -16,7 +16,7 @@ abstract class InitAppException(
     abstract fun getLocalizedErrorMessage(stringProvider: InitStringProvider) : String
 }
 
-class DeviceIsRootedException: InitAppException("Device is rooted") {
+class DeviceIsRootedExceptionAbstract: InitAbstractAppException("Device is rooted") {
     override fun getLocalizedErrorMessage(stringProvider: InitStringProvider): String {
         return stringProvider.deviceIsRootedErrorMessage
     }

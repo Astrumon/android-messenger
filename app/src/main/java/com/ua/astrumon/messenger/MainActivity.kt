@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.ua.astrumon.messenger.core.essentials.exceptions.ConnectionException
+import com.ua.astrumon.messenger.core.essentials.exceptions.ConnectionExceptionAbstract
 import com.ua.astrumon.messenger.core.essentials.exceptions.mapper.ExceptionToMessageMapper
 import com.ua.astrumon.messenger.core.essentials.logger.Logger
 import com.ua.astrumon.messenger.ui.theme.MessengerTheme
@@ -29,8 +29,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
 
-        val message1 = exceptionToMessageMapper.getLocalizedMessage(ConnectionException())
-        val message2 = ExceptionToMessageMapper.getLocalizedMessage(ConnectionException())
+        val message1 = exceptionToMessageMapper.getLocalizedMessage(ConnectionExceptionAbstract())
+        val message2 = ExceptionToMessageMapper.getLocalizedMessage(ConnectionExceptionAbstract())
 
         Logger.d(message1)
         Logger.d(message2)
