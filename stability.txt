@@ -1,0 +1,2 @@
+com.ua.astrumon.messenger.feature.*.domain.entities.*
+com.elveum.container.Container<_>

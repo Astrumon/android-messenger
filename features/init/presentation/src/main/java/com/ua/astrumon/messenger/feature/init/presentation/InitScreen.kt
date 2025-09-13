@@ -14,7 +14,7 @@ fun InitScreen() {
 }
 
 @Composable
-fun initContent(state: InitViewModel.State) {
+fun InitContent(state: InitViewModel.State) {
     // todo: render screen content
 }
 

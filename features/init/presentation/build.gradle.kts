@@ -7,11 +7,9 @@ plugins {
 
 android {
     namespace = "com.ua.astrumon.messenger.feature.init.presentation"
-
-    buildFeatures {
-        compose = true
-    }
 }
+
+setupCompose()
 
 dependencies {
     api(projects.features.init.domain)

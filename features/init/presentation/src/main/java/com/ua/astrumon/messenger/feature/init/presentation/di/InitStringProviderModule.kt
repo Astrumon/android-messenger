@@ -12,7 +12,7 @@ import dagger.multibindings.IntoMap
 
 @Module
 @InstallIn(SingletonComponent::class)
-interface InitStringResourceModule {
+interface InitStringProviderModule {
 
     @Binds
     @IntoMap
