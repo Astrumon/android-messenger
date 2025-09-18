@@ -1,7 +1,7 @@
 package com.ua.astrumon.messenger.feature.init.presentation.di
 
 import com.ua.astrumon.messenger.core.essentials.resources.StringProvider
-import com.ua.astrumon.messenger.feature.init.domain.InitStringProvider
+import com.ua.astrumon.messenger.feature.init.domain.resources.InitStringProvider
 import com.ua.astrumon.messenger.feature.init.presentation.resources.InitStringProviderImpl
 import dagger.Binds
 import dagger.Module

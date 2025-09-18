@@ -1,7 +1,10 @@
 package com.ua.astrumon.messenger.core.common.android.di
 
+import android.content.Context
+import com.ua.astrumon.messenger.core.common.android.AndroidExceptionHandler
 import com.ua.astrumon.messenger.core.common.android.AndroidLogger
 import com.ua.astrumon.messenger.core.common.android.CoreStringProviderImpl
+import com.ua.astrumon.messenger.core.essentials.exceptions.handler.ExceptionHandler
 import com.ua.astrumon.messenger.core.essentials.exceptions.mapper.DefaultExceptionToMessageMapper
 import com.ua.astrumon.messenger.core.essentials.exceptions.mapper.ExceptionToMessageMapper
 import com.ua.astrumon.messenger.core.essentials.logger.Logger
@@ -31,4 +34,5 @@ interface CommonAndroidModule {
     fun bindExceptionToMessageMapper(
         defaultExceptionToMessageMapper: DefaultExceptionToMessageMapper
     ): ExceptionToMessageMapper
+
 }

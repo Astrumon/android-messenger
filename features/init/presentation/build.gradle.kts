@@ -14,6 +14,7 @@ setupCompose()
 dependencies {
     api(projects.features.init.domain)
     implementation(projects.core.essentials)
+    implementation(projects.core.theme)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
